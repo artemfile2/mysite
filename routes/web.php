@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// todo: сделать группы
+
+Route::group(['namespace' => 'Client'], function (){
+
+    Route::get('/','PageController@index')
+        ->name('client.layouts.base');
+
 });

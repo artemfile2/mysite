@@ -16,6 +16,6 @@
 Route::group(['namespace' => 'Client'], function (){
 
     Route::get('/','PageController@index')
-        ->name('client.layouts.base');
+        ->name('site.page.index');
 
 });

@@ -9,7 +9,7 @@ class PageController extends Controller
 {
     public function index()
     {
-        return view('client.layouts.main', [
+        return view('client.pages.section', [
             'title' => 'Главная страница',
         ]);
     }

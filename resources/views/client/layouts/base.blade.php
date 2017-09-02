@@ -3,26 +3,14 @@
     @include('client.parts.head')
 <body>
 
-@include('client.layouts.header')
+    @include('client.layouts.header')
 
-<!-- Main -->
-<div id="main">
-    @include('client.pages.index')
+    <div id="main">
+        @yield('pages')
+    </div>
 
-    @include('client.pages.blog')
-
-    @include('client.pages.portfolio')
-
-    @include('client.pages.about')
-
-    @include('client.pages.contact')
-</div>
-
-@include('client.parts.footer')
-
-{{--@include('client.parts.script')--}}
-
-@stack('script')
+    @include('client.parts.footer')
+    @yield('script')
 
 </body>
 </html>

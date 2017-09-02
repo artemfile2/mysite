@@ -1,20 +1,13 @@
 @extends('client.layouts.base')
 
-{{--@stack('script')--}}
+@section('pages')
+    @yield('index')
+    @yield('blog')
+    @yield('portfolio')
+    @yield('about')
+    @yield('contact')
+@endsection
 
-
-@push('script')
-
-    <div id="footer">
-        <p>тут текст!!!!</p>
-    </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.scrolly.min.js"></script>
-    <script src="js/jquery.scrollzer.min.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/util.js"></script>
-    <!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
-
-    <script src="js/main.js"></script>
-
-@endpush
+@section('script')
+    @yield('main-script')
+@endsection

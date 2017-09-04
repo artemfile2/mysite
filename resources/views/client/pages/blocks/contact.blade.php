@@ -5,13 +5,13 @@
 
             <header>
                 <h2>Contact</h2>
+                <p>Контактные данные
+                  <br>Номер телефона: 8989898989
+                  <br>Почта: qaz@qaz.aa</p>
             </header>
 
-            <p>Контактные данные
-                <br>Номер телефона: 8989898989
-                <br>Почта: qaz@qaz.aa</p>
-
-            <form method="post" action="#">
+            <form action="{{route('site.mail.sent')}}" method="post">
+                {{ csrf_field() }}
                 <div class="row">
                     <div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
                     <div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>

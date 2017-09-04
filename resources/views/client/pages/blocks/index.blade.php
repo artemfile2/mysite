@@ -4,14 +4,17 @@
         <div class="container">
 
             <header>
-                <h2 class="alt">Hi! I'm <strong>Prologue</strong>, a <a href="http://html5up.net/license">free</a> responsive<br />
+                <h2 class="alt">Привет! Я <strong>Web разработчик</strong>, a <a href="http://html5up.net/license">free</a> responsive<br />
                     site template designed by <a href="http://html5up.net">HTML5 UP</a>.</h2>
-                <p>Ligula scelerisque justo sem accumsan diam quis<br />
-                    vitae natoque dictum sollicitudin elementum.</p>
+                <p>Данный сайт моя работа c beck-end на PHP<br>
+                    с применяемыми технологиями такими как:<br>
+                    laravel git jquery.</p>
             </header>
 
             <footer>
-                <a href="#portfolio" class="button scrolly">Magna Aliquam</a>
+                <a href="#portfolio" class="button scrolly">Блог</a>
+                <a href="#portfolio" class="button scrolly">Портфолио</a>
+                <a href="#portfolio" class="button scrolly">Контакты</a>
             </footer>
 
         </div>

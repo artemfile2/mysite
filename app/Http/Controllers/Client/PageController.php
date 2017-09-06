@@ -11,6 +11,7 @@ class PageController extends Controller
     {
         return view('client.pages.section', [
             'title' => 'Главная страница',
+            'mess' => 0,
         ]);
     }
 }

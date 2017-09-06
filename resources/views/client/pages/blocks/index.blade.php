@@ -12,9 +12,9 @@
             </header>
 
             <footer>
-                <a href="#portfolio" class="button scrolly">Блог</a>
+                <a href="#blog" class="button scrolly">Блог</a>
                 <a href="#portfolio" class="button scrolly">Портфолио</a>
-                <a href="#portfolio" class="button scrolly">Контакты</a>
+                <a href="#contacts" class="button scrolly">Контакты</a>
             </footer>
 
         </div>

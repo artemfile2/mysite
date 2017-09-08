@@ -9,3 +9,6 @@ Route::group(['namespace' => 'Client'], function (){
         ->name('site.mail.sent');
 
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

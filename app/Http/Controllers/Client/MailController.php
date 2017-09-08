@@ -15,7 +15,7 @@ class MailController extends Controller
 
         $this->validate($request, [
             'name' => 'required|max:50|min:3',
-            'email' => 'required|unique:messages',
+            'email' => 'required|email',
             'message' => 'required',
         ]);
 

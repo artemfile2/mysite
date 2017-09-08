@@ -14,4 +14,5 @@ class PageController extends Controller
             'mess' => 0,
         ]);
     }
+
 }

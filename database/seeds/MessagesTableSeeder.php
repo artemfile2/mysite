@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class MessagesTableSeeder extends Seeder
 {
@@ -17,6 +18,8 @@ class MessagesTableSeeder extends Seeder
                 'name' => 'Jhon',
                 'email' => 'zxc@zxc.ru',
                 'message' => 'text text text',
+                'created_at' => Carbon::createFromTimestamp(time())->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::createFromTimestamp(time())->format('Y-m-d H:i:s'),
             ]);
     }
 }

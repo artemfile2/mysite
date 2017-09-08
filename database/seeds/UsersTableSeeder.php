@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Eloquent\Model;
+//use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class UsersTableSeeder extends Seeder
 {
@@ -17,6 +18,8 @@ class UsersTableSeeder extends Seeder
                 'name' => 'admin',
                 'email' => 'admin@gmail.com',
                 'password' => bcrypt('12345'),
+                'created_at' => Carbon::createFromTimestamp(time())->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::createFromTimestamp(time())->format('Y-m-d H:i:s'),
             ]);
 
         DB::table('users')
@@ -24,6 +27,8 @@ class UsersTableSeeder extends Seeder
                 'name' => 'user',
                 'email' => 'user@gmail.com',
                 'password' => bcrypt('123'),
+                'created_at' => Carbon::createFromTimestamp(time())->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::createFromTimestamp(time())->format('Y-m-d H:i:s'),
             ]);
     }
 }

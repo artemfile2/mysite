@@ -13,6 +13,7 @@ class MessagesTableSeeder extends Seeder
     {
         DB::table('messages')
             ->insert([
+                'id' => 1,
                 'name' => 'Jhon',
                 'email' => 'zxc@zxc.ru',
                 'message' => 'text text text',

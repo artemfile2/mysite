@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="ru">
+<html lang="{{ app()->getLocale() }}">
     @include('client.parts.head')
 <body>
 

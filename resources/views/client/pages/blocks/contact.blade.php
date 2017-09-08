@@ -17,20 +17,20 @@
                 {{ csrf_field() }}
                 <div class="row">
                         <div class="6u 12u$(mobile)">
-                            <input type="text" name="name" placeholder="Name" value="{{ old('name') }}">
+                            <input type="text" name="name" placeholder="Name" value="{{ old('name') }}" required>
                             @if ($errors->has('name'))
                                 <p class="errors"> {{ $errors->first('name') }} </p>
                             @endif
                         </div>
                         <div class="6u$ 12u$(mobile)">
-                            <input type="text" name="email" placeholder="Email" value="{{ old('email') }}">
+                            <input type="text" name="email" placeholder="Email" value="{{ old('email') }}" required>
                             @if ($errors->has('email'))
                                 <p class="errors"> {{ $errors->first('email') }} </p>
                             @endif
                         </div>
 
                         <div class="12u$">
-                            <textarea name="message" placeholder="Message">
+                            <textarea name="message" placeholder="Message" required>
                                 {{ old('message') }}
                             </textarea>
                             @if ($errors->has('message'))

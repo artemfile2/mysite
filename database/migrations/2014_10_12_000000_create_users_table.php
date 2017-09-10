@@ -8,7 +8,7 @@ class CreateUsersTable extends Migration
 {
 
     /**
-     * Run the migrations.
+     * Run the migrations.ц
      *
      * @return void
      */

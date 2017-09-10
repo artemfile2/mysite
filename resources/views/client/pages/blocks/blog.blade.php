@@ -8,6 +8,7 @@
             </header>
 
             <p>Тут буду писать все подряд и вести свой блог</p>
+            <p>Последнии посты</p>
 
             <div class="row">
                 <div class="4u 12u$(mobile)">
@@ -53,7 +54,7 @@
                     </article>
                 </div>
             </div>
-
         </div>
+        <a href="#" class="button scrolly">Читать все</a>
     </section>
 @endsection

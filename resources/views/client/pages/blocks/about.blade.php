@@ -4,17 +4,32 @@
         <div class="container">
 
             <header>
-                <h2>About Me</h2>
+                <h2>Обо мне</h2>
             </header>
 
             <a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
 
-            <p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
-                ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
-                laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
-                parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
-                dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
-                ornare iaculis.</p>
+            <p>Привет, меня зовут Артем.</p>
+
+            <p>
+                Я начинающий Web-программиcт, занимаюсь созданием разнообразных интернет - проектов.
+                <br>
+                На этом сайте будут публиковаться статьи и заметки на интересные для меня темы: о веб-программировании, управлении проектами и электронике.
+                <br>
+                Всегда открыт для сотрудничества. Связаться со мной вы можете через форму на странице
+                <a href="#contact" id="contact-link" class="skel-layers-ignoreHref">контакты</a>.
+            </p>
+            <br>
+            <p>Мои навыки</p>
+            <ul>
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>Laravel</li>
+                <li>Git</li>
+                <li>Jira</li>
+                <li>JavaScript</li>
+                <li>HTML+CSS</li>
+            </ul>
 
         </div>
     </section>

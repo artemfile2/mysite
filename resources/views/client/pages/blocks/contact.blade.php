@@ -13,7 +13,7 @@
                 <p>Ваше письмо успешно отправленно</p>
             @endif
 
-            <form action="{{route('site.mail.sent')}}" method="post">
+            <form action="{{route('site.mail.sent', '#contact')}}" method="post">
                 {{ csrf_field() }}
                 <div class="row">
                         <div class="6u 12u$(mobile)">
@@ -42,8 +42,6 @@
                         </div>
                 </div>
             </form>
-
-
         </div>
     </section>
 @endsection

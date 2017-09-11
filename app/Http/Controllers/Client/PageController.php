@@ -15,4 +15,11 @@ class PageController extends Controller
         ]);
     }
 
+    public function blog()
+    {
+        return view('client.pages.sheets.blogPage', [
+            'title' => 'Блог',
+        ]);
+    }
+
 }

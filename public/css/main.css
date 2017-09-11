@@ -1724,6 +1724,11 @@
 			width: 100%;
 		}
 
+		.image.fit.blog {
+			display: inline-block;
+			width: 40%;
+		}
+
 		.image.featured {
 			display: block;
 			width: 100%;
@@ -1947,6 +1952,11 @@
 			margin: 0;
 			padding: 1em 0 1em 0;
 			font-size: 0.8em;
+		}
+
+        .headblog {
+			display: inline;
+			font-size: 1em;
 		}
 
 			.item header h3 {

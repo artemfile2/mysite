@@ -55,6 +55,6 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="button scrolly">Читать все</a>
+        <a href="{{ route('site.page.blog') }}" class="button scrolly">Читать все</a>
     </section>
 @endsection

@@ -8,6 +8,10 @@ Route::group(['namespace' => 'Client'], function (){
     Route::post('/', 'MailController@sent')
         ->name('site.mail.sent');
 
+    Route::group(['prefix' => 'blog'], function () {
+        Route::get('/', 'PageController@blog')
+            ->name('site.page.blog');
+    });
 });
 
 Auth::routes();

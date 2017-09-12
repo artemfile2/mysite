@@ -8,59 +8,64 @@
                 <h2>Блог</h2>
             </header>
 
-                    <article class="item">
-                        <a href="#" class="image fit blog">
-                            <img src="images/pic02.jpg" alt="" />
-                            {{--<header class="headblog">--}}
-                                <h3 class="headblog">WEB разработка</h3>
-                            {{--</header>--}}
+                    <div class="items">
+                        <a href="#" class="blog">
+                            <p class="textblog">
+                                <img src="images/pic02.jpg" class="img-float" />
+                                WEB разработка много текста
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Ab ad deserunt ducimus, ex facere ipsum similique voluptate.
+                                Alias amet atque consectetur eveniet facere fugiat,
+                                officia quidem voluptatum! Corporis, harum veritatis.</p>
                         </a>
-                    </article>
+                    </div>
 
-                    <article class="item">
-                        <a href="#" class="image fit blog">
-                            <img src="images/pic03.jpg" alt="" />
-                            {{--<header class="headblog">--}}
-                                <h3 class="headblog">HTML5 - CSS3</h3>
-                            {{--</header>--}}
+                    <div class="items">
+                        <a href="#" class="blog">
+                            <p class="textblog">
+                                <img src="images/pic03.jpg" class="img-float" />
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Ab ad deserunt ducimus, ex facere ipsum similique voluptate.
+                                Alias amet atque consectetur eveniet facere fugiat,
+                                officia quidem voluptatum! Corporis, harum veritatis.</p>
                         </a>
-                    </article>
+                    </div>
 
-                    <article class="item">
-                        <a href="#" class="image fit blog">
-                            <img src="images/pic04.jpg" alt="" />
+                    <div class="items">
+                        <a href="#" class="">
+                            <p>
+                                <img src="images/pic04.jpg" class="img-float" />
+                                PHP
+                            </p>
                         </a>
-                        <header>
-                            <h3>PHP</h3>
-                        </header>
-                    </article>
+                    </div>
 
-                    <article class="item">
+                    <div class="item">
                         <a href="#" class="image fit blog">
                             <img src="images/pic05.jpg" alt="" />
                         </a>
-                        <header>
-                            <h3>Laravel</h3>
-                        </header>
-                    </article>
+                        {{--<header>--}}
+                            <p>Laravel</p>
+                        {{--</header>--}}
+                    </div>
 
-                    <article class="item">
+                    <div class="item">
                         <a href="#" class="image fit blog">
                             <img src="images/pic06.jpg" alt="" />
                         </a>
-                        <header>
-                            <h3>JQuery</h3>
-                        </header>
-                    </article>
+                        {{--<header>--}}
+                            <p>JQuery</p>
+                        </he{{--ader>--}}
+                    </div>
 
-                    <article class="item">
+                    <div class="item">
                         <a href="#" class="image fit blog">
                             <img src="images/pic07.jpg" alt="" />
                         </a>
-                        <header>
-                            <h3>GIT</h3>
-                        </header>
-                    </article>
+                        {{--<header>--}}
+                            <p>GIT</p>
+                        {{--</header>--}}
+                    </div>
 
         </div>
     </section>

@@ -1724,6 +1724,11 @@
 			width: 100%;
 		}
 
+		.img-float {
+			float:left; /* Выравнивание по левому краю */
+			margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+		}
+
 		.image.featured {
 			display: block;
 			width: 100%;
@@ -1949,9 +1954,25 @@
 			font-size: 0.8em;
 		}
 
-			.item header h3 {
-				font-size: 1em;
-			}
+		.item header h3 {
+			font-size: 1em;
+		}
+
+	.items {
+		text-align: left;
+		display: block;
+		float: inherit;
+		border: 1px solid red;
+	}
+
+    .textblog {
+		/*display: inline;*/
+		font-size: 0.70em;
+		margin: 5px 10px;
+		/*vertical-align: middle;*/
+	}
+
+
 
 /* Icons */
 

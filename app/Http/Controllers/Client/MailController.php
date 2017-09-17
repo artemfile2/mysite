@@ -22,7 +22,7 @@ class MailController extends Controller
         //TODO: сделать jquery чтоб при отправке сообщения страница не перезагружалась
 
         Message::create([
-            'name'=> $request->name,
+            'name' => $request->name,
             'email' => $request->email,
             'message' => $request->message,
         ]);

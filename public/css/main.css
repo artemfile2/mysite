@@ -1724,11 +1724,6 @@
 			width: 100%;
 		}
 
-		.img-float {
-			float:left; /* Выравнивание по левому краю */
-			margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
-		}
-
 		.image.featured {
 			display: block;
 			width: 100%;
@@ -1960,19 +1955,10 @@
 
 	.items {
 		text-align: left;
-		display: block;
-		float: inherit;
-		border: 1px solid red;
-	}
-
-    .textblog {
-		/*display: inline;*/
+		display: inline-block;
+		float: left;
 		font-size: 0.70em;
-		margin: 5px 10px;
-		/*vertical-align: middle;*/
 	}
-
-
 
 /* Icons */
 

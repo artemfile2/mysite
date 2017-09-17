@@ -3,3 +3,47 @@
     border: 1px solid lightgrey;
     border-radius: 5px;
 }
+
+.blog {
+    margin: 10px 5px;
+    border-bottom: 10px dotted #8A2BE2;
+}
+
+.header-blog {
+    padding: 5px 5px 0 5px;
+    overflow: auto;
+}
+
+.header-blog p{
+    margin: 0;
+    line-height: inherit;
+    margin-right: 10px;
+}
+
+.header-blog,.author,.date {
+    display: inline-block;
+    float: right;
+    width: calc(100% / 2 - 10px);
+    margin-right: 10px;
+    /*border: 1px dashed grey;*/
+}
+
+.title {
+    text-align: left;
+}
+
+.date {
+    font-size: 0.70em;
+}
+
+.content-blog{
+    float: right;
+    margin-bottom: 10px;
+}
+
+.img-float {
+    float: left; /* Выравнивание по левому краю */
+    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+    border-radius: 3px;
+}
+

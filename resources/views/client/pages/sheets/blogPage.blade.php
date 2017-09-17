@@ -8,65 +8,25 @@
                 <h2>Блог</h2>
             </header>
 
-                    <div class="items">
-                        <a href="#" class="blog">
-                            <p class="textblog">
-                                <img src="images/pic02.jpg" class="img-float" />
-                                WEB разработка много текста
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Ab ad deserunt ducimus, ex facere ipsum similique voluptate.
-                                Alias amet atque consectetur eveniet facere fugiat,
-                                officia quidem voluptatum! Corporis, harum veritatis.</p>
-                        </a>
-                    </div>
-
-                    <div class="items">
-                        <a href="#" class="blog">
-                            <p class="textblog">
-                                <img src="images/pic03.jpg" class="img-float" />
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Ab ad deserunt ducimus, ex facere ipsum similique voluptate.
-                                Alias amet atque consectetur eveniet facere fugiat,
-                                officia quidem voluptatum! Corporis, harum veritatis.</p>
-                        </a>
-                    </div>
-
-                    <div class="items">
-                        <a href="#" class="">
-                            <p>
-                                <img src="images/pic04.jpg" class="img-float" />
-                                PHP
+            @if (count($posts)===0)
+                <p class="errors">Нет постов в моем блоге</p>
+            @else
+                @foreach($posts as $post)
+                    <div class="items blog">
+                        <img src="images/pic0{{$post->id}}.jpg" class="img-float" />
+                        <div class="header-blog">
+                            <p class="title item-blog">{{ $post->title }}</p>
+                            <p class="author item-blog">
+                                <a href="#" class="">{{ $post->user }}</a>
                             </p>
+                            <p class="date item-blog">{{ $post->created_at}}</p>
+                        </div>
+                        <a href="#" class="content-blog">
+                            <p> {{ $post->content}} </p>
                         </a>
                     </div>
-
-                    <div class="item">
-                        <a href="#" class="image fit blog">
-                            <img src="images/pic05.jpg" alt="" />
-                        </a>
-                        {{--<header>--}}
-                            <p>Laravel</p>
-                        {{--</header>--}}
-                    </div>
-
-                    <div class="item">
-                        <a href="#" class="image fit blog">
-                            <img src="images/pic06.jpg" alt="" />
-                        </a>
-                        {{--<header>--}}
-                            <p>JQuery</p>
-                        </he{{--ader>--}}
-                    </div>
-
-                    <div class="item">
-                        <a href="#" class="image fit blog">
-                            <img src="images/pic07.jpg" alt="" />
-                        </a>
-                        {{--<header>--}}
-                            <p>GIT</p>
-                        {{--</header>--}}
-                    </div>
-
+                @endforeach
+            @endif
         </div>
     </section>
 @endsection

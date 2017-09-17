@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Client;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Post;
 
 class PageController extends Controller
 {
@@ -13,8 +14,13 @@ class PageController extends Controller
      * */
     public function index()
     {
+        $posts = Post::all()
+            ->sortByDesc('created_at')
+            ->take(9);
+
         return view('client.pages.section', [
             'title' => 'Главная страница',
+            'posts' => $posts,
             'mess' => 0,
         ]);
     }
@@ -24,8 +30,12 @@ class PageController extends Controller
      * */
     public function blog()
     {
+        $posts = Post::all()
+            ->sortByDesc('created_at');
+
         return view('client.pages.sheets.blogPage', [
             'title' => 'Блог',
+            'posts' => $posts,
         ]);
     }
 

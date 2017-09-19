@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Client;
 
 use App\Models\Message;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -27,8 +28,12 @@ class MailController extends Controller
             'message' => $request->message,
         ]);
 
+        $posts = Post::all()
+            ->sortByDesc('created_at');
+
         return view('client.pages.section', [
             'title' => 'Главная страница',
+            'posts' => $posts,
             'mess' => 1,
         ]);
     }

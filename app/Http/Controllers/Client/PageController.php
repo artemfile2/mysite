@@ -14,9 +14,10 @@ class PageController extends Controller
      * */
     public function index()
     {
+
         $posts = Post::all()
             ->sortByDesc('created_at')
-            ->take(9);
+            ->take(6);
 
         return view('client.pages.section', [
             'title' => 'Главная страница',
@@ -31,7 +32,7 @@ class PageController extends Controller
     public function blog()
     {
         $posts = Post::all()
-            ->sortByDesc('created_at');
+        ;
 
         return view('client.pages.sheets.blogPage', [
             'title' => 'Блог',

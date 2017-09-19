@@ -16,7 +16,7 @@ class PostsTableSeeder extends Seeder
             ->insert([
                 'id' => 1,
                 'title' => 'Web - develop title zagolovok text',
-                'user' => 'Сопик Артем',
+                'user_id' => 1,
                 'content' => 'Веб-разработка — процесс создания веб-сайта или веб-приложения. 
                               Основными этапами процесса являются веб-дизайн, вёрстка страниц, 
                               программирование для веб на стороне клиента и сервера, 
@@ -28,7 +28,7 @@ class PostsTableSeeder extends Seeder
             ->insert([
                 'id' => 2,
                 'title' => 'PHP it\'s real cool for web',
-                'user' => 'Сопик Артем',
+                'user_id' => 2,
                 'content' => 'PHP (англ. PHP: Hypertext Preprocessor — 
                               «PHP: препроцессор гипертекста»; первоначально Personal 
                               Home Page Tools — «Инструменты для создания персональных 
@@ -44,7 +44,7 @@ class PostsTableSeeder extends Seeder
             ->insert([
                 'id' => 3,
                 'title' => 'Laravel frameworks my live',
-                'user' => 'Артем Atem',
+                'user_id' => 1,
                 'content' => 'Laravel — бесплатный веб-фреймворк с открытым кодом, 
                               предназначенный для разработки с использованием 
                               архитектурной модели MVC (англ. Model View Controller — 
@@ -60,7 +60,7 @@ class PostsTableSeeder extends Seeder
             ->insert([
                 'id' => 4,
                 'title' => 'Git cool systems ',
-                'user' => 'Atem S',
+                'user_id' => 2,
                 'content' => 'Git (произн. «гит») — распределённая система управления версиями. 
                               Проект был создан Линусом Торвальдсом для управления разработкой 
                               ядра Linux, первая версия выпущена 7 апреля 2005 года.',
@@ -71,7 +71,7 @@ class PostsTableSeeder extends Seeder
             ->insert([
                 'id' => 5,
                 'title' => 'JQery',
-                'user' => 'A S',
+                'user_id' => 1,
                 'content' => 'jQuery — библиотека JavaScript, фокусирующаяся на взаимодействии 
                               JavaScript и HTML. Библиотека jQuery помогает легко получать 
                               доступ к любому элементу',

@@ -25,7 +25,7 @@
                                 $posts->shift()
                             @endphp
 
-                            @if($loop->index == 2)
+                            @if($loop->index == 1)
                                 @break
                             @endif
                         @endforeach

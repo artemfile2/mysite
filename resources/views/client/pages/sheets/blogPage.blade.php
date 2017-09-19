@@ -7,7 +7,7 @@
             <header>
                 <h2>Блог</h2>
             </header>
-
+            {{--//todo: сделать пагинцию страниц--}}
             @if (count($posts)===0)
                 <p class="errors">Нет постов в моем блоге</p>
             @else
@@ -17,7 +17,7 @@
                         <div class="header-blog">
                             <p class="title item-blog">{{ $post->title }}</p>
                             <p class="author item-blog">
-                                <a href="#" class="">{{ $post->user }}</a>
+                                <a href="#" class="">{{ $post->user->name }}</a>
                             </p>
                             <p class="date item-blog">{{ $post->created_at}}</p>
                         </div>

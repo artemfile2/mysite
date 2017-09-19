@@ -14,6 +14,6 @@ class Message extends Model
     protected $dates = ['deleted_at'];
 
     protected $fillable = [
-        'name', 'email', 'message'
+        'name', 'email', 'message', 'created_at', 'updated_at'
     ];
 }

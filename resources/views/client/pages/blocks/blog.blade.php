@@ -11,48 +11,27 @@
             <p>Последнии посты</p>
 
             <div class="row">
-                <div class="4u 12u$(mobile)">
-                    <article class="item">
-                        <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-                        <header>
-                            <h3>WEB разработка</h3>
-                        </header>
-                    </article>
-                    <article class="item">
-                        <a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-                        <header>
-                            <h3>HTML5 - CSS3</h3>
-                        </header>
-                    </article>
-                </div>
-                <div class="4u 12u$(mobile)">
-                    <article class="item">
-                        <a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-                        <header>
-                            <h3>PHP</h3>
-                        </header>
-                    </article>
-                    <article class="item">
-                        <a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-                        <header>
-                            <h3>Laravel</h3>
-                        </header>
-                    </article>
-                </div>
-                <div class="4u$ 12u$(mobile)">
-                    <article class="item">
-                        <a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-                        <header>
-                            <h3>JQuery</h3>
-                        </header>
-                    </article>
-                    <article class="item">
-                        <a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-                        <header>
-                            <h3>GIT</h3>
-                        </header>
-                    </article>
-                </div>
+
+                @for($i=0; $i<=2; $i++)
+                    <div class="4u 12u$(mobile)">
+                        @foreach($posts as $post)
+                            <article class="item">
+                                <a href="#" class="image fit"><img src="images/pic0{{$post->id}}.jpg" alt="" /></a>
+                                <header>
+                                    <h3>{{$post->title}}</h3>
+                                </header>
+                            </article>
+                            @php
+                                $posts->shift()
+                            @endphp
+
+                            @if($loop->index == 1)
+                                @break
+                            @endif
+                        @endforeach
+                    </div>
+                @endfor
+
             </div>
         </div>
         <a href="{{ route('site.page.blog') }}" class="button scrolly">Читать все</a>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Client;
 
 use App\Models\Message;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -22,13 +23,17 @@ class MailController extends Controller
         //TODO: сделать jquery чтоб при отправке сообщения страница не перезагружалась
 
         Message::create([
-            'name'=> $request->name,
+            'name' => $request->name,
             'email' => $request->email,
             'message' => $request->message,
         ]);
 
+        $posts = Post::all()
+            ->sortByDesc('created_at');
+
         return view('client.pages.section', [
             'title' => 'Главная страница',
+            'posts' => $posts,
             'mess' => 1,
         ]);
     }

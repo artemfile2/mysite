@@ -14,6 +14,14 @@ Route::group(['namespace' => 'Client'], function (){
     });
 });
 
+Route::group(['namespace' => 'Admin',
+              'prefix' => 'admin',
+              'middleware'=>'auth'], function (){
+
+    Route::get('/','AdminController@index')
+        ->name('site.admin.index');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')

@@ -28,11 +28,12 @@ class PageController extends Controller
 
     /*
      * Page my blog
-     * */
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function blog()
     {
-        $posts = Post::all()
-        ;
+        $posts = Post::paginate(3);
 
         return view('client.pages.sheets.blogPage', [
             'title' => 'Блог',

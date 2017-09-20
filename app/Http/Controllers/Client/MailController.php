@@ -21,6 +21,7 @@ class MailController extends Controller
         ]);
 
         //TODO: сделать jquery чтоб при отправке сообщения страница не перезагружалась
+        //todo: реализовать реальную отправку почты
 
         Message::create([
             'name' => $request->name,

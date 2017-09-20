@@ -7,7 +7,7 @@
             <header>
                 <h2>Блог</h2>
             </header>
-            {{--//todo: сделать пагинцию страниц--}}
+
             @if (count($posts)===0)
                 <p class="errors">Нет постов в моем блоге</p>
             @else
@@ -27,6 +27,10 @@
                     </div>
                 @endforeach
             @endif
+            {{--//todo: правильный вывод пагинции страниц--}}
+            <?php /*echo $posts->render(); */?>
+            {{ $posts->links() }}
         </div>
+
     </section>
 @endsection

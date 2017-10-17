@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Client;
 
+use App\Mail\MailShipped;
 use App\Models\Message;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\MessageBag;
 
 class MailController extends Controller
@@ -31,6 +33,9 @@ class MailController extends Controller
 
         $posts = Post::all()
             ->sortByDesc('created_at');
+
+        Mail::to(['qzip@yandex.ru.ru'])
+            ->send(new MailShipped($request->name, $request->email, $request->message));
 
         return view('client.pages.section', [
             'title' => 'Главная страница',

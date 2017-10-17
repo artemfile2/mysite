@@ -4,46 +4,30 @@
     border-radius: 5px;
 }
 
-.blog {
-    margin: 10px 5px;
-    border-bottom: 10px dotted #8A2BE2;
+.hr1 {
+    border: 0;
+    height: 1px;
+    background: #5f859b;
+    background-image: -webkit-linear-gradient(left, #fff, #747474, #fff);
+    background-image: -moz-linear-gradient(left, #fff, #5f859b, #fff);
+    background-image: -ms-linear-gradient(left, #fff, #0e9a16, #fff);
+    background-image: -o-linear-gradient(left, #fff, #cb9219, #fff);
+    /*    background-image: -webkit-linear-gradient(left, #fff, #747474, #fff);
+        background-image: -moz-linear-gradient(left, #fff, #000, #fff);
+        background-image: -ms-linear-gradient(left, #fff, #000, #fff);
+        background-image: -o-linear-gradient(left, #fff, #000, #fff);*/
+    margin-top: 10px;
 }
 
-.header-blog {
-    padding: 5px 5px 0 5px;
-    overflow: auto;
+.hr1 {
+    margin-bottom: 50px;
 }
 
-.header-blog p{
-    margin: 0;
-    line-height: inherit;
-    margin-right: 10px;
-}
-
-.header-blog,.author,.date {
-    display: inline-block;
-    float: right;
-    width: calc(100% / 2 - 10px);
-    margin-right: 10px;
-    /*border: 1px dashed grey;*/
-}
-
-.title {
-    text-align: left;
-}
-
-.date {
+.font70em {
     font-size: 0.70em;
 }
 
 .content-blog{
-    float: right;
     margin-bottom: 10px;
+    font-size: 0.75em;
 }
-
-.img-float {
-    float: left; /* Выравнивание по левому краю */
-    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
-    border-radius: 3px;
-}
-

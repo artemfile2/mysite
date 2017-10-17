@@ -5,32 +5,40 @@
         <div class="container">
 
             <header>
-                <h2>Блог</h2>
+                <h2><strong>Блог</strong></h2>
+                <div class="hr1"></div>
             </header>
 
             @if (count($posts)===0)
                 <p class="errors">Нет постов в моем блоге</p>
             @else
                 @foreach($posts as $post)
-                    <div class="items blog">
-                        <img src="images/pic0{{$post->id}}.jpg" class="img-float" />
-                        <div class="header-blog">
-                            <p class="title item-blog">{{ $post->title }}</p>
-                            <p class="author item-blog">
-                                <a href="#" class="">{{ $post->user->name }}</a>
-                            </p>
-                            <p class="date item-blog">{{ $post->created_at}}</p>
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <img class="img-fluid img-thumbnail"
+                                 src="images/pic0{{$post->id}}.jpg" width="304" height="236"/>
                         </div>
-                        <a href="#" class="content-blog">
-                            <p> {{ $post->content}} </p>
-                        </a>
+                        <div class="col-sm-3">
+                            <div class="col-md-12">{{ $post->title }}</div>
+                            <div class="col-md-12 font70em">
+                                <a href="#"> {{ $post->user->name }}</a>
+                            </div>
+                            <div class="col-md-12 font70em">{{ $post->created_at }}</div>
+                        </div>
+                        <div class="col-sm-6">
+                            <a href="#" class="content-blog">
+                                {{ $post->content }}
+                            </a>
+                        </div>
                     </div>
+                    <div class="hr1"></div>
                 @endforeach
+                <div class="row pull-right">
+                    {{$posts->links()}}
+                </div>
             @endif
-            {{--//todo: правильный вывод пагинции страниц--}}
-            <?php /*echo $posts->render(); */?>
-            {{ $posts->links() }}
         </div>
 
     </section>
+
 @endsection

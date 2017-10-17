@@ -33,7 +33,9 @@ class PageController extends Controller
      */
     public function blog()
     {
-        $posts = Post::paginate(3);
+        $posts = Post::with('user')
+            ->orderByDesc('created_at')
+            ->paginate(5);
 
         return view('client.pages.sheets.blogPage', [
             'title' => 'Блог',

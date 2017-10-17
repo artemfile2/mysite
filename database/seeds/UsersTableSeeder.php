@@ -18,6 +18,7 @@ class UsersTableSeeder extends Seeder
                 'name' => 'admin',
                 'email' => 'admin@gmail.com',
                 'password' => bcrypt('12345'),
+                'is_admin' => 1,
                 'created_at' => Carbon::createFromTimestamp(time())->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::createFromTimestamp(time())->format('Y-m-d H:i:s'),
             ]);

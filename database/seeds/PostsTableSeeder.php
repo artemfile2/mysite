@@ -21,6 +21,7 @@ class PostsTableSeeder extends Seeder
                               Основными этапами процесса являются веб-дизайн, вёрстка страниц, 
                               программирование для веб на стороне клиента и сервера, 
                               а также конфигурирование веб-сервера.',
+                'count_views' => 42,
                 'created_at' => Carbon::createFromTimestamp(time())->format('Y-m-d H:i:s'),
             ]);
 
@@ -37,6 +38,7 @@ class PostsTableSeeder extends Seeder
                               В настоящее время поддерживается подавляющим большинством 
                               хостинг-провайдеров и является одним из лидеров среди языков, 
                               применяющихся для создания динамических веб-сайтов.',
+                'count_views' => 5,
                 'created_at' => Carbon::createFromTimestamp(time())->format('Y-m-d H:i:s'),
             ]);
 
@@ -53,6 +55,7 @@ class PostsTableSeeder extends Seeder
                               В результате опроса sitepoint.com в декабре 2013 года о 
                               самых популярных PHP-фреймворках Laravel занял место самого 
                               многообещающего проекта на 2014 год.',
+                'count_views' => 2,
                 'created_at' => Carbon::createFromTimestamp(time())->format('Y-m-d H:i:s'),
             ]);
 
@@ -64,6 +67,7 @@ class PostsTableSeeder extends Seeder
                 'content' => 'Git (произн. «гит») — распределённая система управления версиями. 
                               Проект был создан Линусом Торвальдсом для управления разработкой 
                               ядра Linux, первая версия выпущена 7 апреля 2005 года.',
+                'count_views' => 12,
                 'created_at' => Carbon::createFromTimestamp(time())->format('Y-m-d H:i:s'),
             ]);
 
@@ -75,6 +79,7 @@ class PostsTableSeeder extends Seeder
                 'content' => 'jQuery — библиотека JavaScript, фокусирующаяся на взаимодействии 
                               JavaScript и HTML. Библиотека jQuery помогает легко получать 
                               доступ к любому элементу',
+                'count_views' => 22,
                 'created_at' => Carbon::createFromTimestamp(time())->format('Y-m-d H:i:s'),
             ]);
     }

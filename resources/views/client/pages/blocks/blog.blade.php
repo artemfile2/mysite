@@ -18,8 +18,11 @@
                     <div class="4u 12u$(mobile)">
                         @foreach($posts as $post)
                             <article class="item">
+                                {{--todo поставить картинку по умолчанию которая будет выходить еслил в безе не загружена--}}
                                 <a href="#" class="image fit"><img src="images/pic0{{$post->id}}.jpg" alt="" /></a>
                                 <header>
+                                    {{--todo сделать заголовки одной длинной не больше 60 символов--}}
+                                    {{--todo межстрочный интервал увеличить, маленькое расстояние--}}
                                     <h3>{{$post->title}}</h3>
                                 </header>
                             </article>

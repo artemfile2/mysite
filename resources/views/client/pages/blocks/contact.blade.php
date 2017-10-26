@@ -5,8 +5,7 @@
 
             <header>
                 <h2>Контактные данные</h2>
-                <p>Номер телефона: 8989898989
-                  <br>Почта: qaz@qaz.aa</p>
+                <p>Номер телефона: 8(906) 480 22 44</p>
             </header>
 
             @if( $mess == 1 )
@@ -31,7 +30,7 @@
 
                         <div class="12u$">
                             <textarea name="message" placeholder="Message" required>
-                                {{ old('message') }}
+                                {{ old('message') or '' }}
                             </textarea>
                             @if ($errors->has('message'))
                                 <p class="errors"> {{ $errors->first('message') }} </p>

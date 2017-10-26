@@ -13,83 +13,58 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/mainAdmin.css') }}" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                @auth
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="" class="dropdown-toggle"
-                           data-toggle="dropdown" role="button"
-                           aria-expanded="false">Меню
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Категории</a></li>
-                            <li><a href="#">Материалы</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                @else
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
+    <header class="main-header hidden-print">
+        <a class="logo" href="#">
+            {{ config('app.name', 'Laravel') }}
+        </a>
+        <nav class="navbar navbar-static-top">
+            <!-- Sidebar toggle button-->
+            <a class="sidebar-toggle" href="#" data-toggle="offcanvas"></a>
+            <!-- Navbar Right Menu-->
+            <div class="navbar-custom-menu">
+                <ul class="top-nav">
                     @guest
                         <li><a href="{{ route('login') }}">Вход</a></li>
                         <li><a href="{{ route('register') }}">Регистрация</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                    @else
+                    <!-- User Menu-->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user fa-lg"> {{ Auth::user()->name }}</i>
+                        </a>
+                        <ul class="dropdown-menu settings-menu">
+                            <li><a href="page-user.html"><i class="fa fa-cog fa-lg"></i> Настройки</a></li>
+                            <li><a href="page-user.html"><i class="fa fa-user fa-lg"></i> Профиль</a></li>
+                            <li>
+                                <a href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                                    <i class="fa fa-sign-out fa-lg"></i>Выход
                                 </a>
 
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
                             </li>
-                            @endguest
+                        </ul>
+                    </li>
                 </ul>
-                @endauth
+                @endguest
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     @yield('content')
 </div>
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/mainAdmin.js') }}"></script>
 </body>
 </html>

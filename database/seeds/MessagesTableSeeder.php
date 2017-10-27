@@ -17,6 +17,7 @@ class MessagesTableSeeder extends Seeder
                 'id' => 1,
                 'name' => 'Jhon',
                 'email' => 'zxc@zxc.ru',
+                'title' => 'title Message',
                 'message' => 'text text text',
                 'created_at' => Carbon::createFromTimestamp(time())->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::createFromTimestamp(time())->format('Y-m-d H:i:s'),

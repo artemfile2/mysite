@@ -29,6 +29,7 @@
                             @php
                                 $posts->shift()
                             @endphp
+                            {{--todo сделать вывод кол-ва комментариев к посту--}}
 
                             @if($loop->index == 1)
                                 @break

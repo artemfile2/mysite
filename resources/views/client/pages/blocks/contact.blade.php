@@ -28,6 +28,13 @@
                             @endif
                         </div>
 
+                        <div class="12u$ 12u$(mobile)">
+                            <input type="text" name="title" placeholder="Title" value="{{ old('title') }}" required>
+                            @if ($errors->has('title'))
+                                <p class="errors"> {{ $errors->first('title') }} </p>
+                            @endif
+                        </div>
+
                         <div class="12u$">
                             <textarea name="message" placeholder="Message" required>
                                 {{ old('message') or '' }}

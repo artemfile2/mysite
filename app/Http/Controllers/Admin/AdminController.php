@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class AdminController extends Controller
 {
     public function index(){
-        return view('admin.base', [
+        return view('admin.pages.dashboard', [
             'user' => Auth::user(),
         ]);
     }

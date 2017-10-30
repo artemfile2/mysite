@@ -1,6 +1,3 @@
-@extends('admin.layouts.app')
-
-@section('sideLeft')
     <!-- Side-Nav-->
     <aside class="main-sidebar hidden-print">
         <section class="sidebar">
@@ -23,22 +20,15 @@
                     </a>
                 </li>
 
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-laptop"></i>
-                        <span>UI Elements</span>
-                        <i class="fa fa-angle-right"></i>
+                <li>
+                    <a href="{{ route('site.admin.messages') }}">
+                        <i class="fa fa-envelope"></i>
+                        <span>Письма</span>
                     </a>
-                    <ul class="treeview-menu">
-                        <li><a href="bootstrap-components.html"><i class="fa fa-circle-o"></i> Bootstrap Elements</a></li>
-                        <li><a href="ui-font-awesome.html"><i class="fa fa-circle-o"></i> Font Icons</a></li>
-                        <li><a href="ui-cards.html"><i class="fa fa-circle-o"></i> Cards</a></li>
-                        <li><a href="widgets.html"><i class="fa fa-circle-o"></i> Widgets</a></li>
-                    </ul>
                 </li>
 
                 <li>
-                    <a href="charts.html">
+                    <a href="{{ route('site.admin.listPosts') }}">
                         <i class="fa fa-file-text-o"></i>
                         <span>Посты в блоге</span>
                     </a>
@@ -83,4 +73,3 @@
             </ul>
         </section>
     </aside>
-@endsection

@@ -20,6 +20,12 @@ Route::group(['namespace' => 'Admin',
 
     Route::get('/','AdminController@index')
         ->name('site.admin.index');
+
+    Route::get('/posts','AdminController@listPosts')
+        ->name('site.admin.listPosts');
+
+    Route::get('/messages','AdminController@messages')
+        ->name('site.admin.messages');
 });
 
 Auth::routes();

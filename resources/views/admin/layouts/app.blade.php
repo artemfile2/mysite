@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 
-    @include('admin.layouts.head')
+    @include('admin.parts.head')
 
 <body>
     <div id="app">

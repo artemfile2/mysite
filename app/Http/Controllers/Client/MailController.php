@@ -42,17 +42,17 @@ class MailController extends Controller
             //Server settings
             $mail->SMTPDebug = 0;                                 // Enable verbose debug output
             $mail->isSMTP();                                      // Set mailer to use SMTP
-            $mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
+            $mail->Host = env('MAIL_HOST');  // Specify main and backup SMTP servers
             $mail->SMTPAuth = true;                               // Enable SMTP authentication
-            $mail->Username = 'qzip@yandex.ru';                 // SMTP username
-            $mail->Password = '12nirvana2185';                   // SMTP password
+            $mail->Username = env('MAIL_USERNAME');                 // SMTP username
+            $mail->Password = env('MAIL_PASSWORD');                   // SMTP password
             $mail->CharSet = 'UTF-8';
             $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 465;                                    // TCP port to connect to
-            $mail->setLanguage('ru', '/optional/path/to/language/directory/');
+            //$mail->setLanguage('ru', '/optional/path/to/language/directory/');
 
             //Recipients
-            $mail->setFrom('qzip@yandex.ru', $request->name);
+            $mail->setFrom(env('MAIL_USERNAME'), $request->name);
             $mail->addAddress('file2@rambler.ru', 'Joe User');
             /*$mail->addReplyTo('info@example.com', 'Information');
             $mail->addCC('cc@example.com');

@@ -26,6 +26,12 @@ Route::group(['namespace' => 'Admin',
 
     Route::get('/messages','AdminController@messages')
         ->name('site.admin.messages');
+
+    Route::get('/message/edit/{id}','AdminController@messageEdit')
+        ->name('site.admin.messageEdit');
+
+    Route::post('/message/sent','MailOutController@sent')
+        ->name('site.mailout.sent');
 });
 
 Auth::routes();

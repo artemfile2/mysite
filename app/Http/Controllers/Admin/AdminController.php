@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Message;
+use App\Models\Message_out;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -27,9 +28,21 @@ class AdminController extends Controller
     public function messages(){
 
         $messages = Message::all();
+        $message_outs = Message_out::all();
 
         return view('admin.pages.messages', [
             'messages' => $messages,
+            'message_outs' => $message_outs,
         ]);
+    }
+
+    public function messageEdit($id){
+
+        $message = Message::find($id);
+
+        return view('admin.pages.actions.messageEdit', [
+            'message' => $message,
+        ]);
+
     }
 }

@@ -37,9 +37,24 @@ class PageController extends Controller
             ->orderByDesc('created_at')
             ->paginate(5);
 
-        return view('client.pages.sheets.blogPage', [
+        return view('client.pages.sheets.blogAllPage', [
             'title' => 'Блог',
             'posts' => $posts,
+        ]);
+    }
+
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function newsOne($id){
+        $post = Post::find($id);
+
+        $post->viewed++;
+        $post->save();
+
+        return view('client.pages.sheets.blogContent', [
+            'post' => $post,
         ]);
     }
 

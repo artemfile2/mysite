@@ -11,6 +11,9 @@ Route::group(['namespace' => 'Client'], function (){
     Route::group(['prefix' => 'blog'], function () {
         Route::get('/', 'PageController@blog')
             ->name('site.page.blog');
+
+        Route::get('/news/{id}', 'PageController@newsOne')
+            ->name('site.page.blogOne');
     });
 });
 
@@ -23,6 +26,9 @@ Route::group(['namespace' => 'Admin',
 
     Route::get('/posts','AdminController@listPosts')
         ->name('site.admin.listPosts');
+
+    Route::get('/post/add','ModifyPostController@Add')
+        ->name('site.admin.post.add');
 
     Route::get('/messages','AdminController@messages')
         ->name('site.admin.messages');

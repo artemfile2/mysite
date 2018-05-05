@@ -4,11 +4,11 @@
     <div class="content-wrapper">
         <div class="page-title">
             <div>
-                <h1>Сообщения</h1>
+                <h1>Письма</h1>
                 <ul class="breadcrumb side">
                     <li><i class="fa fa-home fa-lg"></i></li>
-                    <li>Tables</li>
-                    <li class="active"><a href="#">Data Table</a></li>
+                    <li class="active"><a href="{{route('site.admin.index')}}">Панель инструментов</a></li>
+                    <li>Письма</li>
                 </ul>
             </div>
         </div>

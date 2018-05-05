@@ -7,12 +7,12 @@
                 <h1>Посты</h1>
                 <ul class="breadcrumb side">
                     <li><i class="fa fa-home fa-lg"></i></li>
-                    <li>Tables</li>
-                    <li class="active"><a href="#">Data Table</a></li>
+                    <li class="active"><a href="{{route('site.admin.index')}}">Панель инструментов</a></li>
+                    <li>Посты</li>
                 </ul>
             </div>
             <div>
-                <a class="btn btn-primary btn-flat" href="#">
+                <a class="btn btn-primary btn-flat" href="{{route('site.admin.post.add')}}">
                     <i class="fa fa-lg fa-plus"></i>
                 </a>
                 <a class="btn btn-info btn-flat" href="#">
@@ -33,8 +33,9 @@
                                 <th>№</th>
                                 <th>Картинка</th>
                                 <th>Заголовок</th>
-                                <th>Краткое содержание</th>
                                 <th>Пользователь</th>
+                                <th>Просмотров</th>
+                                <th>Коментариев</th>
                                 <th>Опубликованно</th>
                                 <th>Созданно</th>
                                 <th>Удаленно</th>
@@ -46,8 +47,9 @@
                                 <td>{{ $post->id }}</td>
                                 <td>{{ $post->image }}</td>
                                 <td>{{ $post->title }}</td>
-                                <td>{{ $post->description_short }}</td>
                                 <td>{{ $post->user_id }}</td>
+                                <td>{{ $post->viewed }}</td>
+                                <td>{{ $post->comments }}</td>
                                 <td>{{ $post->published }}</td>
                                 <td>{{ $post->created_at }}</td>
                                 <td>{{ $post->deleted_at }}</td>

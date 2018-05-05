@@ -19,17 +19,30 @@
                         @foreach($posts as $post)
                             <article class="item">
                                 {{--todo поставить картинку по умолчанию которая будет выходить еслил в безе не загружена--}}
-                                <a href="#" class="image fit"><img src="images/pic0{{$post->id}}.jpg" alt="" /></a>
                                 <header>
                                     {{--todo сделать заголовки одной длинной не больше 60 символов--}}
                                     {{--todo межстрочный интервал увеличить, маленькое расстояние--}}
-                                    <h3>{{$post->title}}</h3>
+                                    <h3>
+                                        <a href="{{ route('site.page.blogOne', $post->id) }}">
+                                            {{$post->title}}
+                                        </a>
+                                    </h3>
                                 </header>
+                                <a href="{{ route('site.page.blogOne', $post->id) }}" class="image fit">
+                                    <img src="images/pic0{{$post->id}}.jpg" alt="" />
+                                </a>
+                                <div>
+                                    {{--todo сделать вывод кол-ва комментариев к посту--}}
+                                    <div class="icon fa-calendar f60em spacediv">
+                                        {{currentDate($post->created_at)}}
+                                    </div>
+                                    <div class="icon fa-eye f60em spacediv"> {{ $post->viewed }} </div>
+                                    <div class="icon fa-comments f60em spacediv">2 </div>
+                                </div>
                             </article>
                             @php
                                 $posts->shift()
                             @endphp
-                            {{--todo сделать вывод кол-ва комментариев к посту--}}
 
                             @if($loop->index == 1)
                                 @break

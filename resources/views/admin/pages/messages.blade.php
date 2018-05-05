@@ -2,6 +2,16 @@
 
 @section('content')
     <div class="content-wrapper">
+        <div class="page-title">
+            <div>
+                <h1>Письма</h1>
+                <ul class="breadcrumb side">
+                    <li><i class="fa fa-home fa-lg"></i></li>
+                    <li class="active"><a href="{{route('site.admin.index')}}">Панель инструментов</a></li>
+                    <li>Письма</li>
+                </ul>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-3"><a class="mb-20 btn btn-primary btn-block" href="">Письма</a>
                 <div class="card p-0">

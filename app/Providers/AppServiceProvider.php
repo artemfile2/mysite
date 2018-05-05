@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,6 +15,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         include app_path('Helpers/greeting.php');
+        include app_path('Helpers/currentDate.php');
+        Schema::defaultStringLength(191);
     }
 
     /**
